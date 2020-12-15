@@ -4,7 +4,7 @@
   height: calc(80vh - (37.1 * 80vh / 100));
 
   display: grid;
-  grid-template: repeat(5, 20%) / repeat(5, 20%);
+  grid-template: repeat(5, 20%) / repeat(5, 1fr);
 }
 
 #advanced
@@ -18,4 +18,19 @@
 {
   min-height: 1rem;
   flex-basis: 15%;
+  font-weight: 500;
+}
+
+#numbers
+{
+  grid-row: 2 / -1;
+  grid-column: 1 / 4;
+
+  display: grid;
+  grid-template: repeat(4, 25%) / repeat(3, 1fr);
+}
+
+#numbers button
+{
+  font-size: 1.6rem;
 }
