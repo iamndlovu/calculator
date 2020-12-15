@@ -1,0 +1,33 @@
+#screen
+{
+  width: 100%;
+  height: calc(37.1 * 80vh / 100);
+  border-bottom: 1px solid #333;
+}
+
+#screen div
+{
+  text-align: right;
+  padding-right: 5px;
+}
+
+.info
+{
+  flex: 1;
+  font-size: 0.8rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.problem-display
+{
+  flex: 5;
+  font-weight: 450;
+  font-size: 1.7rem;
+}
+
+.answer-display
+{
+  flex: 2;
+  font-size: 1.5rem;
+}

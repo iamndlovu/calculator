@@ -1,8 +1,9 @@
 #app
 {
-  margin: 1rem;
-  max-width: 500px;
+  margin: 0 1rem;
+  max-width: 50vh;
   flex-basis: 300px;
   flex: 1;
   border: 3px solid #333;
+  height: 80vh;
 }
