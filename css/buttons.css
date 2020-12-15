@@ -34,3 +34,17 @@
 {
   font-size: 1.6rem;
 }
+
+#controls
+{
+  grid-row: 2 / 3;
+  grid-column: 4 / -1;
+
+  display: flex;
+}
+
+#controls button
+{
+  flex: 1;
+  font-size: 1.4rem;
+}
