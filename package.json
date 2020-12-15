@@ -1,0 +1,16 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Javascript calculator app. No framewprks or libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Javascript",
+    "Calculator",
+    "CSS"
+  ],
+  "author": "Pardon Ndlovu",
+  "license": "MIT"
+}
