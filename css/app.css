@@ -1,0 +1,8 @@
+#app
+{
+  margin: 1rem;
+  max-width: 500px;
+  flex-basis: 300px;
+  flex: 1;
+  border: 3px solid #333;
+}
