@@ -58,8 +58,15 @@
   grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 
+#operators button
+{
+  font-size: 1.6rem;
+}
+
 .solve
 {
   grid-column: 1 / -1;
+  font-weight: 500;
+  font-size: 2.7rem;
   background: orange;
 }
