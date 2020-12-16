@@ -6,11 +6,13 @@ numberBtns.addEventListener('click', handleNumClick);
 
 function  handleNumClick(e) {
   let value = e.target.value;
-  if (current == '0') {
-    if (value != '.') current = '';
-    else current = '0'
+  if (calculator.state.current == 'first') {
+    calculator.data.firstNum += String(value);
+    calculator.state.firstNum = true;
+    problemDisplay.textContent = calculator.data.firstNum;
+    console.log(calculator);
+  } else {
+    calculator.data.secondNum += String(value);
+    problemDisplay.textContent = problemDisplay.textContent + String(value);
   }
-
-  current += String(value);
-  problemDisplay.textContent = current;
 }
