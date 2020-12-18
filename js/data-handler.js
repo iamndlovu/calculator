@@ -89,7 +89,9 @@ let calculator = {
         tempstore += problemDisplay.textContent[i];
     }
     problemDisplay.textContent = tempstore;
-    this.solve();
-    answerSDisplay.textContent = `= ${calculator.data.result}`;
+    if (tempstore[tempstore.length -1] !== '-' && tempstore[tempstore.length -1] !== '.') {
+      calculator.solve();
+      answerSDisplay.textContent = `= ${calculator.data.result}`;
+    }
   }
 };

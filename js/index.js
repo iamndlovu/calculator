@@ -17,9 +17,12 @@ function  handleNumClick(e) {
     calculator.data.secondNum += String(value);
     if (problemDisplay.textContent === '0') problemDisplay.textContent = ''
     problemDisplay.textContent = problemDisplay.textContent + String(value);
+    
   }
-  calculator.solve();
-  answerSDisplay.textContent = `= ${calculator.data.result}`;
+  if (value !== '-' && value !== '.') {
+    calculator.solve();
+    answerSDisplay.textContent = `= ${calculator.data.result}`;
+  }
 }
 
 function handleOpClick(e) {
