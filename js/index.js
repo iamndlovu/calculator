@@ -1,10 +1,12 @@
 const numberBtns = document.querySelector('#numbers'),
       problemDisplay = document.querySelector('.problem-display'),
       answerSDisplay = document.querySelector('.answer-display'),
-      operators = document.querySelector('#operators');
+      operators = document.querySelector('#operators'),
+      controls = document.querySelector('#controls');
 
 numberBtns.addEventListener('click', handleNumClick);
 operators.addEventListener('click', handleOpClick);
+controls.addEventListener('click', handleContClick);
 
 function  handleNumClick(e) {
   let value = e.target.value;
@@ -15,9 +17,9 @@ function  handleNumClick(e) {
     calculator.data.secondNum += String(value);
     if (problemDisplay.textContent === '0') problemDisplay.textContent = ''
     problemDisplay.textContent = problemDisplay.textContent + String(value);
-    calculator.solve();
-    answerSDisplay.textContent = `= ${calculator.data.result}`;
   }
+  calculator.solve();
+  answerSDisplay.textContent = `= ${calculator.data.result}`;
 }
 
 function handleOpClick(e) {
@@ -44,4 +46,9 @@ function handleOpClick(e) {
       result: ''
     }
   }
+}
+
+function handleContClick(e) {
+  if (e.target.value == 'clear') calculator.clear();
+  else calculator.backspace();
 }

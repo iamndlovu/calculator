@@ -62,5 +62,34 @@ let calculator = {
     };
     answerSDisplay.textContent = '0';
     problemDisplay.textContent = '0';
+  },
+
+  backspace() {
+    if (this.state.current == 'first') {
+      let temp = '';
+      for (let i = 0; i < this.data.firstNum.length - 1; i++ ) {
+        temp += this.data.firstNum[i];
+      }
+      this.data.firstNum = temp;
+      //problemDisplay.textContent = this.data.firstNum;
+    } else {
+      if (this.data.secondNum.length == 0 && this.data.operator != '') {
+        this.data.operator = '';
+        this.state.current = 'first';
+      } else {
+        let temp1 = '';
+        for (let i = 0; i < this.data.secondNum.length - 1; i++ ) {
+          temp1 += this.data.secondNum[i];
+        }
+        this.data.secondNum = temp1;
+      }
+    }
+    let tempstore = '';
+    for (let i = 0; i <  problemDisplay.textContent.length - 1; i++) {
+        tempstore += problemDisplay.textContent[i];
+    }
+    problemDisplay.textContent = tempstore;
+    this.solve();
+    answerSDisplay.textContent = `= ${calculator.data.result}`;
   }
 };
